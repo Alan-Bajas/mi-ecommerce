@@ -7,7 +7,6 @@
 
 > **Desarrollado por:** Alan Bajas  
 > **Curso:** Desarrollo Web — Coderhouse  
-> **Profesor:** *(agrega el nombre si quieres)*  
 > **Entrega final:** eCommerce Responsive + SASS
 
 ---
