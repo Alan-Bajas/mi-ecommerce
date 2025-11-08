@@ -41,3 +41,40 @@ Incluye:
 ---
 
 ## 📁 Estructura del proyecto
+mi-ecommerce/
+├── public/
+│   ├── css/
+│   │   └── main.css
+│   └── assets/
+│       ├── img/
+│       └── js/
+├── src/
+│   └── scss/
+│       ├── abstracts/
+│       │   ├── _variables.scss
+│       │   └── _mixins.scss
+│       ├── base/
+│       │   ├── _reset.scss
+│       │   ├── _typography.scss
+│       │   └── _utilities.scss
+│       ├── components/
+│       │   ├── _buttons.scss
+│       │   ├── _cards.scss
+│       │   └── _forms.scss
+│       ├── layout/
+│       │   ├── _header.scss
+│       │   ├── _footer.scss
+│       │   └── _grid.scss
+│       └── pages/
+│           ├── _home.scss
+│           ├── _shop.scss
+│           └── _product.scss
+├── index.html
+├── shop.html
+├── product.html
+├── cart.html
+├── checkout.html
+├── package.json
+├── .gitignore
+└── README.md
+
