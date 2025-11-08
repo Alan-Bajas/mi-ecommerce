@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as *;
+
+.badge {
+  position: absolute;
+  top: .75rem; left: .75rem;
+  background: c("secondary");
+  color: #fff;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: .35rem .55rem;
+  border-radius: .5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+.badge-sale { background: #e84393; }

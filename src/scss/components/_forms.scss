@@ -1,0 +1,20 @@
+@use "../abstracts/variables" as *;
+
+/* Tabs Bootstrap con acento primario */
+.nav-tabs .nav-link {
+  border: 1px solid #e9ecef;
+  border-bottom: none;
+  color: c("dark");
+  &.active {
+    color: c("primary");
+    font-weight: 600;
+    background: #fff;
+    border-color: c("primary") c("primary") transparent;
+  }
+}
+.tab-content {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-top: none;
+  border-radius: 0 0 .75rem .75rem;
+}

@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+
+  .brand { font-weight: 700; }
+
+  .nav-link {
+    padding: .75rem 1rem;
+    border-radius: .75rem;
+    &:hover { background: c("light"); }
+    &.active {
+      color: c("primary") !important;
+      background: rgba(108,92,231,.12);
+      font-weight: 600;
+    }
+    &:focus-visible { outline: 2px solid c("accent"); outline-offset: 2px; }
+  }
+}

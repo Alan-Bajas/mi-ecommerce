@@ -1,0 +1,576 @@
+@charset "UTF-8";
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+/* Tokens */
+/* Helpers */
+/* === BASE (reset, tipografía, utilidades) === */
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #2d3436;
+  background: #f8f9fa;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+h1, .h1 {
+  font-size: clamp(1.875rem, 1rem + 1.5vw, 2.5rem);
+  margin: 0 0 1rem;
+}
+
+h2, .h2 {
+  font-size: clamp(1.5rem, 1rem + 1.5vw, 2rem);
+  margin: 0 0 0.75rem;
+}
+
+h3, .h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0 0 0.75rem;
+}
+
+.lead {
+  opacity: 0.85;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.text-primary {
+  color: #6c5ce7;
+}
+
+.bg-primary {
+  background-color: #6c5ce7;
+}
+
+.border-primary {
+  border-color: #6c5ce7;
+}
+
+.text-secondary {
+  color: #00cec9;
+}
+
+.bg-secondary {
+  background-color: #00cec9;
+}
+
+.border-secondary {
+  border-color: #00cec9;
+}
+
+.text-dark {
+  color: #2d3436;
+}
+
+.bg-dark {
+  background-color: #2d3436;
+}
+
+.border-dark {
+  border-color: #2d3436;
+}
+
+.text-light {
+  color: #f8f9fa;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.border-light {
+  border-color: #f8f9fa;
+}
+
+.text-accent {
+  color: #fdcb6e;
+}
+
+.bg-accent {
+  background-color: #fdcb6e;
+}
+
+.border-accent {
+  border-color: #fdcb6e;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.m-1 {
+  margin: 0.25rem !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important;
+}
+
+.m-2 {
+  margin: 0.5rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
+}
+
+.m-3 {
+  margin: 0.75rem !important;
+}
+
+.p-3 {
+  padding: 0.75rem !important;
+}
+
+.m-4 {
+  margin: 1rem !important;
+}
+
+.p-4 {
+  padding: 1rem !important;
+}
+
+.m-5 {
+  margin: 1.5rem !important;
+}
+
+.p-5 {
+  padding: 1.5rem !important;
+}
+
+.m-6 {
+  margin: 2rem !important;
+}
+
+.p-6 {
+  padding: 2rem !important;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin-inline: auto;
+}
+
+/* === LAYOUT (estructura general del sitio) === */
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid--products {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .grid--products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .grid--products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.site-header .brand {
+  font-weight: 700;
+}
+.site-header .nav-link {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+}
+.site-header .nav-link:hover {
+  background: #f8f9fa;
+}
+.site-header .nav-link.active {
+  color: #6c5ce7 !important;
+  background: rgba(108, 92, 231, 0.12);
+  font-weight: 600;
+}
+.site-header .nav-link:focus-visible {
+  outline: 2px solid #fdcb6e;
+  outline-offset: 2px;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+/* ===== FOOTER GENERAL ===== */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  font-size: 0.9rem;
+  color: #555;
+}
+.site-footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+.site-footer small {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.site-footer .links {
+  display: flex;
+  gap: 0.75rem;
+}
+.site-footer .links a {
+  color: #2d3436;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.site-footer .links a:hover {
+  color: #6c5ce7;
+}
+
+/* ===== VARIANTE DE FOOTER OSCURO (opcional futuro) ===== */
+.site-footer--dark {
+  background: #2d3436;
+  color: #f8f9fa;
+  border-top: none;
+}
+.site-footer--dark .links a {
+  color: #f8f9fa;
+}
+.site-footer--dark .links a:hover {
+  color: #fdcb6e;
+}
+
+/* === COMPONENTS (elementos reutilizables) === */
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.btn--ghost, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn--ghost:hover, .btn:hover {
+    transform: translateY(-1px);
+  }
+}
+.btn--ghost:focus-visible, .btn:focus-visible {
+  outline: 2px solid c("accent");
+  outline-offset: 2px;
+}
+
+.btn {
+  background: #6c5ce7;
+  color: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+@keyframes pop {
+  from {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.card {
+  background: #fff;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+.card--product {
+  animation: pop 0.25s ease both;
+}
+.card {
+  /* Imagen con relación 16:10 para que todas queden parejas */
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+}
+.card .card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card .price {
+  font-weight: 700;
+  color: #6c5ce7;
+  margin: 0;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+/* Tabs Bootstrap con acento primario */
+.nav-tabs .nav-link {
+  border: 1px solid #e9ecef;
+  border-bottom: none;
+  color: #2d3436;
+}
+.nav-tabs .nav-link.active {
+  color: #6c5ce7;
+  font-weight: 600;
+  background: #fff;
+  border-color: #6c5ce7 #6c5ce7 transparent;
+}
+
+.tab-content {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-top: none;
+  border-radius: 0 0 0.75rem 0.75rem;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: #00cec9;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.badge-sale {
+  background: #e84393;
+}
+
+/* === PAGES (estilos específicos por página) === */
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+/* ===== HERO PRINCIPAL ===== */
+.gradient-hero {
+  background: linear-gradient(135deg, #6c5ce7 0%, #8b7cf5 50%, #00cec9 100%);
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  color: #fff;
+}
+.gradient-hero .container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.gradient-hero h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.gradient-hero p.lead {
+  font-size: 1.125rem;
+  opacity: 0.9;
+}
+.gradient-hero img {
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== PILLS DE CATEGORÍAS ===== */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 1rem;
+  background: #fff;
+  color: #2d3436;
+  border: 1px solid #eaeaea;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+}
+.pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #6c5ce7;
+}
+
+/* ===== SECCIÓN PROMO ===== */
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+.promo h3 {
+  font-weight: 600;
+  color: #6c5ce7;
+  margin-bottom: 0.25rem;
+}
+.promo p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .gradient-hero h1 {
+    font-size: 2.5rem;
+  }
+}
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.shop .filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
+   MAIN.SCSS — Archivo principal que compila todos los parciales
+   ========================================================= */
+/* === ABSTRACTS (variables, mixins, funciones) === */
+.product .gallery {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 1rem;
+}
+.product {
+  /* Carrusel: altura fija + recorte */
+}
+.product #carouselProduct .carousel-inner {
+  border-radius: 1.25rem;
+  overflow: hidden;
+  max-height: 480px; /* ajusta si quieres más/menos alto */
+}
+.product #carouselProduct .carousel-item img {
+  width: 100%;
+  height: 480px; /* misma altura del contenedor */
+  object-fit: cover; /* rellena sin deformar */
+}
+.product .title {
+  margin-bottom: 0.5rem;
+}
+
+/* === ESTILOS GLOBALES ADICIONALES === */
+/* Fondo base y cuerpo general */
+body {
+  background-color: #f8f9fa;
+  color: #2d3436;
+}
+
+/* Ajuste global para títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Navbar activo */
+.nav-link.active {
+  color: #6c5ce7 !important;
+  font-weight: 600;
+  border-bottom: 2px solid #6c5ce7;
+}
+
+/* Botón flotante para volver arriba (opcional futuro) */
+.back-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #6c5ce7;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+.back-top:hover {
+  transform: translateY(-3px);
+}
+
+/*# sourceMappingURL=main.css.map */

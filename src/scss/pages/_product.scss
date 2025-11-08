@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.product {
+  .gallery {
+    background: #fff;
+    border-radius: r(xl);
+    padding: s(4);
+  }
+
+  /* Carrusel: altura fija + recorte */
+  #carouselProduct {
+    .carousel-inner {
+      border-radius: r(xl);
+      overflow: hidden;
+      max-height: 480px; /* ajusta si quieres más/menos alto */
+    }
+    .carousel-item img {
+      width: 100%;
+      height: 480px;       /* misma altura del contenedor */
+      object-fit: cover;   /* rellena sin deformar */
+    }
+  }
+
+  .title { margin-bottom: s(2); }
+}

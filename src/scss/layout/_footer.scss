@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+/* ===== FOOTER GENERAL ===== */
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  font-size: .9rem;
+  color: #555;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: s(3);
+  }
+
+  small {
+    font-size: .85rem;
+    opacity: .8;
+  }
+
+  .links {
+    display: flex;
+    gap: s(3);
+
+    a {
+      color: c("dark");
+      text-decoration: none;
+      font-weight: 500;
+      transition: color .2s ease;
+
+      &:hover {
+        color: c("primary");
+      }
+    }
+  }
+}
+
+/* ===== VARIANTE DE FOOTER OSCURO (opcional futuro) ===== */
+.site-footer--dark {
+  background: c("dark");
+  color: #f8f9fa;
+  border-top: none;
+
+  .links a {
+    color: #f8f9fa;
+    &:hover {
+      color: c("accent");
+    }
+  }
+}

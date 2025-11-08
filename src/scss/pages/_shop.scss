@@ -1,0 +1,10 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+.shop {
+  .filters {
+    display: flex;
+    gap: s(3);
+    flex-wrap: wrap;
+    margin-bottom: s(4);
+  }
+}

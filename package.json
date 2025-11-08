@@ -1,0 +1,17 @@
+{
+  "name": "mi-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js","scripts": {
+  "dev:sass": "sass --watch src/scss/main.scss public/css/main.css",
+  "build:sass": "sass src/scss/main.scss public/css/main.css --style=compressed"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}

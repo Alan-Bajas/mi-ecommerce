@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.grid { display: grid; gap: s(4); }
+.grid--products {
+  grid-template-columns: repeat(2, 1fr);
+  @include up("md") { grid-template-columns: repeat(3, 1fr); }
+  @include up("lg") { grid-template-columns: repeat(4, 1fr); }
+}

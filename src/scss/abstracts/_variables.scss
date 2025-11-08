@@ -1,0 +1,19 @@
+@use "sass:map";
+
+/* Tokens */
+$colors: (
+  "primary": #6c5ce7,
+  "secondary": #00cec9,
+  "dark": #2d3436,
+  "light": #f8f9fa,
+  "accent": #fdcb6e
+);
+
+$space: (0: 0, 1: .25rem, 2: .5rem, 3: .75rem, 4: 1rem, 5: 1.5rem, 6: 2rem);
+$radii: (sm: .5rem, md: .75rem, lg: 1rem, xl: 1.25rem);
+$shadow-lg: 0 12px 30px rgba(0,0,0,.15);
+
+/* Helpers */
+@function c($key) { @return map.get($colors, $key); }
+@function s($key) { @return map.get($space, $key); }
+@function r($key) { @return map.get($radii, $key); }

@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+@each $name, $val in $colors {
+  .text-#{$name} { color: $val; }
+  .bg-#{$name} { background-color: $val; }
+  .border-#{$name} { border-color: $val; }
+}
+
+@each $k, $v in $space {
+  .m-#{$k} { margin: $v !important; }
+  .p-#{$k} { padding: $v !important; }
+}
+
+.container { width: min(1120px, 92%); margin-inline: auto; }
